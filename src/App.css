@@ -1,38 +1,202 @@
-.App {
-  text-align: center;
+.timeline {
+  position: relative;
+  padding: 4px 0 0 0;
+  margin-top: 22px;
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.timeline > li:nth-child(even) {
+  position: relative;
+  margin-bottom: 50px;
+  height: 180px;
+  right: -100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.timeline > li:nth-child(odd) {
+  position: relative;
+  margin-bottom: 50px;
+  height: 180px;
+  left: -100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
 }
 
-.App-link {
-  color: #61dafb;
+.timeline > li:after {
+  clear: both;
+  min-height: 170px;
 }
 
-@keyframes App-logo-spin {
-  from {
+.timeline > li .timeline-panel {
+  position: relative;
+  float: left;
+  width: 41%;
+  padding: 0 20px 20px 30px;
+  text-align: right;
+}
+
+.timeline > li .timeline-panel:before {
+  right: auto;
+  left: -15px;
+  border-right-width: 15px;
+  border-left-width: 0;
+}
+
+.timeline > li .timeline-panel:after {
+  right: auto;
+  left: -14px;
+  border-right-width: 14px;
+  border-left-width: 0;
+}
+
+.timeline > li .timeline-image {
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  /* animation: spin 5s infinite linear; */
+}
+.timeline > li .timeline-image::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 186.5px;
+  height: 186.5px;
+  margin-left: -100px;
+  border: 7px solid #fff000;
+  box-shadow: 0 0 10px #fff000;
+  border-right-color: transparent;
+  border-radius: 100%;
+  animation: spin 10s infinite linear;
+}
+.timeline > li .timeline-image h4 {
+  margin-top: 12px;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+  padding: 0 30px 20px 20px;
+  text-align: left;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  right: auto;
+  left: -15px;
+  border-right-width: 15px;
+  border-left-width: 0;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  right: auto;
+  left: -14px;
+  border-right-width: 14px;
+  border-left-width: 0;
+}
+
+.timeline > li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+  margin-top: 22px;
+  margin-bottom: 4px;
+  padding: 0;
+  color: whitesmoke;
+}
+
+
+.timeline .timeline-body > p,
+.timeline .timeline-body > ul {
+  margin-bottom: 0;
+  color: #808080;
+}
+/*Style for even div.line*/
+.timeline > li:nth-child(odd) .line:before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 690px;
+  width: 4px;
+  height: 340px;
+  background-color: #fff000;
+  -ms-transform: rotate(-44deg); /* IE 9 */
+  -webkit-transform: rotate(-44deg); /* Safari */
+  transform: rotate(-44deg);
+  box-shadow: 0 0 15px #fff000;
+}
+/*Style for odd div.line*/
+.timeline > li:nth-child(even) .line:before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 450px;
+  width: 4px;
+  height: 340px;
+  background-color: #fff000;
+  -ms-transform: rotate(44deg); /* IE 9 */
+  -webkit-transform: rotate(44deg); /* Safari */
+  transform: rotate(44deg);
+  box-shadow: 0 0 15px #fff000;
+}
+
+
+
+.image-style {
+  width: 186px;
+  height: 186px;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
+}
+
+.mainHead{
+  color: whitesmoke;
+}
+
+p{
+  color: whitesmoke !important;
+  font-size: 16px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* box-shadow: 0px 0px 4px whitesmoke;  */
+  padding: 12px;
+  text-align: left;
+}
+
+.timeline .timeline-heading h4.subheading{
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  font-size: 18px;
+  color: #fff000;
+}
+
+.ending {
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  font-size: 18px;
+  color: #fff000;
+  box-shadow: 0px 0px 10px whitesmoke;
+  border-radius: 50px 20px ; 
+  width:30%;
+  text-align: center;
+  margin-left: 35%;
+  padding: 2px;
 }
