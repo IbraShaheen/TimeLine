@@ -15,7 +15,7 @@ function Footer() {
           </div>
           <div className="timeline-panel">
             <div className="timeline-heading">
-              <h4>Under processing</h4>
+              <h4>2018 - under process</h4>
               <h4 className="subheading">Electric Jet</h4>
               <br/>
             </div>

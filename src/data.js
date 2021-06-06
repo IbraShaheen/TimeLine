@@ -45,7 +45,7 @@ const data = [
     {
         id: 4,
         imag1: "Hyperloop 2012.png",
-        period1: "2012",
+        period1: "2012 - under process",
         breif1: "Hyperloop",
         parag1:
           "The Hyperloop — high-speed travel in pods inside a partial-vacuum tube — is the brainchild of Tesla CEO Elon Musk, who open sourced the basic design in 2013 in the form of a white paper. The transportation system, which was introduced in 2013 aims to reduce the travel time from hours to minutes. It will be 4 times faster than a commercial flight.",
